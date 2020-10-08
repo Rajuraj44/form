@@ -1,0 +1,288 @@
+  <!DOCTYPE html>
+<html>
+<head>
+	<title>Form</title>
+	<link rel="stylesheet" href="index.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <style type="text/css">
+      .calculatorcontent form input{
+        color:black !important;
+      }
+      .calculatorcontent form .error{
+        color:red;
+        font-size:15px;
+      }
+
+      .form2 form input{
+        color:black !important;
+      }
+      .form2 form textarea{
+        color:black !important;
+      }
+      .form2 form .error{
+        color:red;
+        font-size:15px;
+      }
+      #first i{
+        padding:11px 17px;
+        background-color:black;
+        color:#00c6ca;
+        margin-right:40px;
+        border-radius:50%;
+         color:white;
+        font-size:25px !important;
+        float:right;
+         opacity:.9;
+      }
+      #first i:hover{
+        color:white;
+        color:#00c6ca;
+        cursor:pointer;
+
+      }
+      #second i{
+        padding:10px 16px;
+        background-color:grey;
+        color:#00c6ca;
+        margin-right:40px;
+        border-radius:50%;
+        color:white;
+        font-size:28px !important;
+        float:right;
+     
+      }
+      #second i:hover{
+        color:white;
+        color:black;
+        cursor:pointer;
+      }
+    </style>
+</head>
+<body>
+	                                          <!-- ///////navbar/////-->
+	  	<nav class="navbar navbar-expand-md navigation navbar-light fixed-top pt-lg-4 pb-lg-4">
+	  		<div class="container">
+	  			<a href="index.html" class="navbar-brand"><img src="small_logo.jpg" class="img-fluid"><span>Fintra</span></a>
+	  			<button class="navbar-toggler" data-target="#mynav" data-toggle="collapse">
+	  				<span class="navbar-toggler-icon"></span>
+	  			</button>
+	  			<div class="collapse navbar-collapse" id="mynav">
+	  				<ul class="navbar-nav ml-auto">
+	  					<li class="nav-item"><a href="index.html" class="nav-link ">HOME</a></li>
+	  					<li class="nav-item"><a href="#" class="nav-link">MUTUAL FUNDS</a></li>
+	  					<li class="nav-item active "><a href="#" class="nav-link home">CALCULATORS</a></li>
+	  					<li class="nav-item"><a href="blog.html" class="nav-link ">BLOG</a></li>
+	  					<li class="nav-item"><a href="#" class="nav-link">TOPICS</a></li>
+	  					<li class="nav-item"><a href="#" class="nav-link">NIFTY 50</a></li>
+	  					<li class="nav-item "><a href="#" class="nav-link">NIFTY 500</a></li>
+	  					<li class="nav-item"><a href="#" class="nav-link">NSE</a></li>
+	  					<li class="nav-item"><a href="#" class="nav-link">CREDIT CARDS</a></li>
+	  					<li class="dropdown">
+	  					 <a class="dropdown-toggle" data-toggle="dropdown" href="#">Language</a>
+                             <ul class="dropdown-menu">
+                               <li class="nav-item"><a href="#" class="nav-link"><img src="english.png" class="img-fluid"> ENGLISH</a></li>
+                               <li class="nav-item"><a href="#" class="nav-link"><img src="hindi.png" class="img-fluid"> HINDI</a></li>
+                             </ul>
+                          </li>
+	  				</ul>
+	  			</div>
+	  		</div>
+	  	</nav> <br>  
+      <br> 
+      <br> <br>
+
+
+	  	                               <!-- ////banner///// -->
+
+
+	  <div class="container-fluid page-name">
+	  	<div class="container">
+	  		<ul>
+	  			<li><a href="index.html">HOME <span>/</span></a></li>
+	  			<li><a href="index.html">CALCULATOR <span>/</span></a></li>
+	  			<li><a href="#" style="color:white;">SIP Calculator</a></li>
+	  		</ul>
+	  	</div>
+	  </div>
+
+      <span id="first"><i class="fa  fa-angle-double-up" aria-hidden="true"></i></span>
+      <span id="second"><i class="fa  fa-angle-double-up" aria-hidden="true"></i></span>
+
+
+      <div class="container calculatorcontent">
+      <h3>SIP Calculator</h3>
+      <div class="row border-0">
+        <div class="col-lg-6 col-md-6 col-sm-11 col-12 d-block m-auto">
+          <div class="card border" style="background-color:#F6F8F9; margin-bottom: 30px; box-shadow:1px 1px 5px 0 rgb(0,0,0,.4);">
+            <div class="card-body">
+                     <form id="validate">
+
+                    <div class="form-group">
+                       <label>Monthly Investment Amount</label>
+
+                        
+                       <input  class="form-control" autocomplete="off" name="Monthly_Investment" style="border-radius:1px;" data-rule-number=”true” data-rule-min="100" id="Monthly_Investment" required>
+
+                
+                
+                  </div>
+
+                    <div class="form-group">
+                     <label>Time Period (In Year)</label><br>
+                       
+                     <input type="number" class="form-control" name="Time_period" id="Time_period" style="border-radius:1px;" data-rule-number=”true” data-rule-min="1" required>
+                  
+                  
+                  </div>
+
+                    <div class="form-group">
+                     <label>Expected Return Rate (%)</label>
+                       
+                     <input type="number" class="form-control" name="Rate_ofInterest"  id="Rate_ofInterest" style="border-radius:1px;" data-rule-number=”true” data-rule-min="10" data-rule-max="20" required><br>
+                     </div>
+                    
+                    <button type="submit" id = "driver" class="btn btn-block">Calculate Now</button>
+                    </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-11 col-12 d-block m-auto">
+          <table class="table table-striped">
+                 <thead>
+                   <tr>
+                     <th>Summary</th>
+                     <th></th>
+                     <th></th>
+                   </tr>
+                 </thead>
+
+                 <tbody>
+                  <tr>
+                     <th>Expected amount</th>
+                     <td></td>
+                     <td style="font-size:17px"><strong>&#8377</strong> <span><span id="result"></span></td>
+                   </tr>
+                   <tr>
+                     <th>Amount Invested</th>
+                     <td></td>
+                     <td style="font-size:17px"><strong>&#8377</strong> <span id="AM"></span></td>
+                   </tr>
+                   <tr>
+                     <th>Wealth Gain</th>
+                     <td></td>
+                     <td style="font-size:17px;"><strong>&#8377</strong> <span id="GA" style="color: #00cd00;"></span></td>
+                   </tr>
+                 </tbody>
+                </table>
+        
+        </div>
+      </div>
+     </div>    
+
+
+
+       <div class="container form2">
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-11 col-12 d-block m-auto">
+              <div class="card" style="background-color: #F6F8F9; margin-bottom: 30px; box-shadow:1px 1px 5px 0 rgb(0,0,0,.4);">
+                <div class="card-body">
+                  <form id="validateme">
+                     <div class="form-group">
+                      <label>Your Name</label>
+                     
+                      <input type="text" class="form-control" id="one" data-rule-required="true" name="Name" autocomplete="off" data-rule-minlength="3"   style="border-radius:1px;">
+                      
+                     </div>
+
+                      <div class="form-group">
+                      <label>Your Age</label>
+                  
+                       <input type="number" class="form-control" data-rule-required="true" name="Number"  style="border-radius:1px;" data-rule-min="18" >
+                       <i class="fa fa-exclamation-circle" id="numbericon" id="num2" aria-hidden="true"></i>
+                     </div>
+
+                      <div class="form-group">
+                      <label>Feedback</label>
+                      <textarea class="form-control" data-rule-required="true" rows="3" id="feedback" ></textarea>
+                      
+                      </div>
+                         
+                        <div class="form-check">
+
+                        <input class="form-check-input" data-rule-required="true" type="checkbox"name="radio"> <label>Term & Condition</label>
+                        
+                      
+                        </div> 
+                        <span id="success" style="color:green;" class="text-success"></span><br><br>
+
+                        <button type="submit" id="button"  class="btn btn-block">Submit</button>
+                    </form>
+                </div>
+              </div>
+            </div>
+             <div class="col-lg-6 col-md-6 col-sm-11 col-12 d-block m-auto"></div>
+          </div>
+        </div>             
+
+  
+   
+<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.0.js"></script>
+  <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+   $('#validate').validate();
+  });
+</script> 
+
+   <script type="text/javascript">
+     $(document).ready(function(){
+   $('#validate').validate();
+  });
+   </script>
+      <script type = "text/javascript" language = "javascript">
+         $(document).ready(function() {
+               $("button").click(function(event){ 
+               let Monthly_Investment = $("#Monthly_Investment").val();
+               let Time_period = $("#Time_period").val();
+               let Rate_ofInterest = $("#Rate_ofInterest").val();
+
+               if (Monthly_Investment=="" && Time_period=="" && Rate_ofInterest=="") {
+                  $('#validate').validate();
+               }if (Monthly_Investment=="") {
+                 $('#validate').validate();
+               }if (Time_period=="") {
+                 $('#validate').validate();
+               }if (Rate_ofInterest=="") {
+                 $('#validate').validate();
+               }
+               else{          
+               $("#result").load('result.php', {
+                "Monthly_Investment":Monthly_Investment,
+                "Time_period":Time_period,
+                "Rate_ofInterest":Rate_ofInterest
+                  } 
+                );
+                return false;
+              }
+           });
+        });
+      </script>
+
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('#validateme').validate();
+    
+    
+  });
+</script> 
+</body>
+</html>
